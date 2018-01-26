@@ -6,16 +6,23 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from './../environments/environment';
 
 import { AppComponent } from './app.component';
+import { AppNavbarComponent } from './app-navbar/app-navbar.component';
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { JokesListComponent } from './jokes-list/jokes-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppNavbarComponent,
+    JokesListComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
