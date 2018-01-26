@@ -1,0 +1,8 @@
+<ul>
+    <div *ngFor="let joke of jokesObservable | async">
+        <ngb-alert type="info" [dismissible]="false">
+            <h3>{{joke.jokeText}}</h3>
+            <p>{{joke.userName}}</p>
+        </ngb-alert>
+    </div>
+</ul>
