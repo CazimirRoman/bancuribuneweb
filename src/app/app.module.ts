@@ -10,12 +10,14 @@ import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { JokesListComponent } from './jokes-list/jokes-list.component';
+import { ReversePipeComponent } from './reverse-pipe/reverse-pipe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppNavbarComponent,
-    JokesListComponent
+    JokesListComponent,
+    ReversePipeComponent
   ],
   imports: [
     BrowserModule,
