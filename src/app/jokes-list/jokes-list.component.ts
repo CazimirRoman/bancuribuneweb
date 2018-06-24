@@ -13,6 +13,8 @@ export class JokesListComponent implements OnInit {
 
   constructor(private db: AngularFireDatabase) { }
 
+  jokes: any;
+
   ngOnInit() {
     this.jokesObservable = this.getJokes('/jokes');
   }
@@ -21,4 +23,7 @@ export class JokesListComponent implements OnInit {
     return this.db.list(listPath).valueChanges();
   }
 
+  getTotalJokes(): void{
+    this.jokesObservable
+  }
 }
